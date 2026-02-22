@@ -111,3 +111,13 @@ If you finish early or want an extra challenge, try one of these:
 - Stay curious. The unpredictability is intentional and part of the experience.
 
 When you finish, Playlist Chaos will feel more predictable, and you will have taken your first steps into AI-assisted debugging.
+
+## My Reflection
+
+The core concept students needed to understand was that debugging this project requires tracing how data is moved, classified, and then shown within UI features.
+
+Students are most likely to struggle with hidden behavior , where a small logic choice in `playlist_logic.py` causes confusing effects in search, stats, and lucky-pick behavior.
+
+AI was helpful for quickly finding logic errors functions, explaining the reasoning behind functions, and proposing solutions. 
+
+A good way to guide a student without giving the answer is to ask them to pick one surprising UI behavior and trace it backward from `app.py` into the exact logic function that produces it. From there, have them test one small hypothesis  and confirm whether the code  matches what they expected.
