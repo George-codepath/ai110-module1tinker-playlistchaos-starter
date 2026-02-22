@@ -255,7 +255,6 @@ def add_song_sidebar():
             all_songs.append(normalized)
             st.session_state.songs = all_songs
 
-
 def playlist_tabs(playlists):
     """Render playlists in tabs."""
     include_mixed = st.session_state.profile.get("include_mixed", True)
