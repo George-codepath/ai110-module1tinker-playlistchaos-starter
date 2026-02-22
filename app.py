@@ -210,6 +210,7 @@ def profile_sidebar():
             value=int(profile.get("chill_max_energy", 3)),
         )
 
+    # fav genre will always be rock
     profile["favorite_genre"] = st.sidebar.selectbox(
         "Favorite genre",
         options=["rock", "lofi", "pop", "jazz", "electronic", "ambient", "other"],

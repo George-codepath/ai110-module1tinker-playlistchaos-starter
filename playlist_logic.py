@@ -116,9 +116,12 @@ def compute_playlist_stats(playlists: PlaylistMap) -> Dict[str, object]:
     chill = playlists.get("Chill", [])
     mixed = playlists.get("Mixed", [])
 
+
+    # hype_ratio becomes 1.0 whenever hype has songs so its not right
     total = len(hype)
     hype_ratio = len(hype) / total if total > 0 else 0.0
 
+    # underestimates average energy unless all songs are hype
     avg_energy = 0.0
     if all_songs:
         total_energy = sum(song.get("energy", 0) for song in hype)
@@ -168,6 +171,7 @@ def search_songs(
 
     for song in songs:
         value = str(song.get(field, "")).lower()
+        # This only matches when the full artist string is inside the query, instead of query inside artist.
         if value and value in q:
             filtered.append(song)
 
